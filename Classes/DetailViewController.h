@@ -22,7 +22,7 @@
 
 @class RootViewController, ClassViewController, CounterCell;
 
-@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UITableViewDelegate> {
+@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UITableViewDelegate, MFMailComposeViewControllerDelegate> {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;

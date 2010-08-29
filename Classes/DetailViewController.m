@@ -41,6 +41,7 @@
 	if (school != nil) {
 		MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
 		[mailController setSubject:[NSString stringWithFormat:@"Pictures for %@ (%@)", school.name, school.number]];
+		mailController.mailComposeDelegate = self;
 		
 		MGTemplateEngine *mailEngine = [MGTemplateEngine templateEngine];
 		[mailEngine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:mailEngine]];
@@ -59,6 +60,10 @@
 		[self presentModalViewController:mailController animated:YES];
 		[mailController release];
 	}
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark -

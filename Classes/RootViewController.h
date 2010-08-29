@@ -16,7 +16,7 @@
 
 @class DetailViewController;
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface RootViewController : UITableViewController <UINavigationControllerDelegate, NSFetchedResultsControllerDelegate> {
     
     DetailViewController *detailViewController;
     

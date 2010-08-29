@@ -26,6 +26,8 @@
     [super viewDidLoad];
 	self.title = @"Schools";
 	
+	self.navigationController.delegate = self;
+	
 	self.classActive = NO;
 	
     self.clearsSelectionOnViewWillAppear = NO;
@@ -39,6 +41,14 @@
 		[alert show];
 		[alert release];
     }
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+	if ([viewController class] == [self class]) {
+		if (self.currentSchool != nil) {
+			[detailViewController setSchoolItem:self.currentSchool];
+		}
+	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
