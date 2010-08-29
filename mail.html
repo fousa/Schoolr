@@ -1,0 +1,45 @@
+<html>
+	<body>
+		<h2>Statistics for {{ school.name }} ({{ school.number }}).</h2>
+		
+		<h4>Overall Statistics.</h4>
+		<table>
+			<tr>
+				<th>&nbsp;</th>
+				<th style="text-align: right;">Total</th>
+			</tr>
+			<tr>
+				<th style="text-align: right;">Classes</th>
+				<td style="text-align: right;">{{ totalClasses }}</td>
+			</tr>
+			<tr>
+				<th style="text-align: right;">Teachers</th>
+				<td style="text-align: right;">{{ totalTeachers }}</td>
+			</tr>
+			<tr>
+				<th style="text-align: right;">Students</th>
+				<td style="text-align: right;">{{ totalStudents }}</td>
+			</tr>
+			<tr>
+				<th style="text-align: right;">Brothers &amp; Sisters</th>
+				<td style="text-align: right;">{{ totalBrothersAndSisters }}</td>
+			</tr>
+		</table>
+		
+		<h4>Class Statistics.</h4>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th style="text-align: right;">Students</th>
+				<th style="text-align: right;">Teachers</th>
+			</tr>
+			{% for class in classes %}
+				<tr>
+					<th>{{ class.name }}</th>
+					<th style="text-align: right;">{{ class.studentCount }}</th>
+					<th style="text-align: right;">{{ class.teacherCount }}</th>
+				</tr>
+			{% /for %}
+		</table>
+	</body>
+</html>
