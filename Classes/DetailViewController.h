@@ -16,6 +16,7 @@
 #import "SchoolFormController.h"
 #import "ClassFormController.h"
 #import "CounterCell.h"
+#import "InfoView.h"
 
 #import "School.h"
 #import "SchoolClass.h"
@@ -42,10 +43,10 @@
 @property (nonatomic, retain) IBOutlet UIView *changeableView;
 
 @property (nonatomic, retain) IBOutlet UIView *schoolView;
-@property (nonatomic, retain) IBOutlet UILabel *classCountLabel;
+@property (nonatomic, retain) IBOutlet InfoView *classCountLabel;
 @property (nonatomic, retain) IBOutlet CounterCell *counterField;
-@property (nonatomic, retain) IBOutlet UILabel *teacherCountLabel;
-@property (nonatomic, retain) IBOutlet UILabel *studentCountLabel;
+@property (nonatomic, retain) IBOutlet InfoView *teacherCountLabel;
+@property (nonatomic, retain) IBOutlet InfoView *studentCountLabel;
 
 @property (nonatomic, retain) IBOutlet UIView *classView;
 @property (nonatomic, retain) IBOutlet CounterCell *studentCounterField;

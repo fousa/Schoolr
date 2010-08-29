@@ -22,6 +22,9 @@
 		6018263B1226F8D300EFBFE1 /* SchoolForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601826391226F8D300EFBFE1 /* SchoolForm.xib */; };
 		601826B8122704FA00EFBFE1 /* SchoolsPics.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 280420B3108E9F58000629CD /* SchoolsPics.xcdatamodel */; };
 		601828461227149D00EFBFE1 /* CounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601828451227149D00EFBFE1 /* CounterCell.m */; };
+		60281FCA122B0B0800164351 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60281FC9122B0B0800164351 /* InfoView.m */; };
+		602820E2122B1A2D00164351 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 602820E1122B1A2D00164351 /* plus.png */; };
+		602820ED122B1AAC00164351 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 602820EC122B1AAC00164351 /* minus.png */; };
 		602B4DAE122A558800124898 /* JAVBinarySearchAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B4DAD122A558800124898 /* JAVBinarySearchAdditions.m */; };
 		6051EA1E122AF1F3002179BB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6051EA1D122AF1F3002179BB /* MessageUI.framework */; };
 		6051EA43122AF42D002179BB /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6051EA31122AF42D002179BB /* ICUTemplateMatcher.m */; };
@@ -64,6 +67,10 @@
 		601826391226F8D300EFBFE1 /* SchoolForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolForm.xib; sourceTree = "<group>"; };
 		601828441227149D00EFBFE1 /* CounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CounterCell.h; path = Components/CounterCell.h; sourceTree = "<group>"; };
 		601828451227149D00EFBFE1 /* CounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CounterCell.m; path = Components/CounterCell.m; sourceTree = "<group>"; };
+		60281FC8122B0B0800164351 /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
+		60281FC9122B0B0800164351 /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
+		602820E1122B1A2D00164351 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = Images/plus.png; sourceTree = "<group>"; };
+		602820EC122B1AAC00164351 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minus.png; path = Images/minus.png; sourceTree = "<group>"; };
 		602B4DAC122A558800124898 /* JAVBinarySearchAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAVBinarySearchAdditions.h; sourceTree = "<group>"; };
 		602B4DAD122A558800124898 /* JAVBinarySearchAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAVBinarySearchAdditions.m; sourceTree = "<group>"; };
 		6051EA1D122AF1F3002179BB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -176,6 +183,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				602820E0122B1A1E00164351 /* Images */,
 				6051EA4D122AF458002179BB /* Templates */,
 				609EF49D122952A60064F290 /* ClassForm.xib */,
 				609EF3FF12294C580064F290 /* ClassViewController.xib */,
@@ -206,8 +214,19 @@
 				601828451227149D00EFBFE1 /* CounterCell.m */,
 				609EF3B71229493D0064F290 /* SchoolCell.h */,
 				609EF3B81229493D0064F290 /* SchoolCell.m */,
+				60281FC8122B0B0800164351 /* InfoView.h */,
+				60281FC9122B0B0800164351 /* InfoView.m */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		602820E0122B1A1E00164351 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				602820EC122B1AAC00164351 /* minus.png */,
+				602820E1122B1A2D00164351 /* plus.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		602B4DA7122A557E00124898 /* Frameworks */ = {
@@ -336,6 +355,8 @@
 				609EF40112294C580064F290 /* ClassViewController.xib in Resources */,
 				609EF49E122952A60064F290 /* ClassForm.xib in Resources */,
 				6051EA4F122AF46D002179BB /* mail.html in Resources */,
+				602820E2122B1A2D00164351 /* plus.png in Resources */,
+				602820ED122B1AAC00164351 /* minus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +388,7 @@
 				6051EA47122AF42D002179BB /* NSArray_DeepMutableCopy.m in Sources */,
 				6051EA48122AF42D002179BB /* NSDictionary_DeepMutableCopy.m in Sources */,
 				6051EA49122AF42D002179BB /* RegexKitLite.m in Sources */,
+				60281FCA122B0B0800164351 /* InfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

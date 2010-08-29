@@ -150,7 +150,9 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.currentSchool = (School *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
+    
+	
+	self.currentSchool = (School *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
 	
 	ClassViewController *classViewController = [[ClassViewController alloc] initWithNibName:@"ClassViewController" bundle:[NSBundle mainBundle]];
 	[classViewController setSchool:self.currentSchool];

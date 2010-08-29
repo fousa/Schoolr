@@ -92,11 +92,27 @@
     self.titleLabel.text = school.name;
 	
 	self.counterField.selector = @selector(setBrotherSisterCount:);
-	self.counterField.text = @"Brothers & Sisters";
+	self.counterField.multipleText = @"Brothers & Sisters";
+	self.counterField.singleText = @"Brother & Sister";
 	self.counterField.count = [school.bothersSistersCount intValue];
-	self.studentCountLabel.text = [NSString stringWithFormat:@"%i", [school totalStudents]];
-	self.teacherCountLabel.text = [NSString stringWithFormat:@"%i", [school totalTeachers]];
-	self.classCountLabel.text = [NSString stringWithFormat:@"%i", [school.classes count]];
+	
+	NSString *studentText = @"Students";
+	if ([school totalStudents] == 1) {
+		studentText = @"Student";
+	}
+	[self.studentCountLabel setCount:[school totalStudents] withText:studentText];
+	
+	NSString *teacherText = @"Teachers";
+	if ([school totalStudents] == 1) {
+		teacherText = @"Teacher";
+	}
+	[self.teacherCountLabel setCount:[school totalTeachers] withText:teacherText];
+	
+	NSString *classText = @"Classes";
+	if ([school.classes count] == 1) {
+		classText = @"Class";
+	}
+	[self.classCountLabel setCount:[school.classes count] withText:classText];
 	
 	[self.changeableView addSubview:self.schoolView];
 }
@@ -105,11 +121,13 @@
     self.titleLabel.text = schoolClass.name;
 	
 	self.studentCounterField.selector = @selector(setStudentCount:);
-	self.studentCounterField.text = @"Students";
+	self.studentCounterField.multipleText = @"Students";
+	self.studentCounterField.singleText = @"Student";
 	self.studentCounterField.count = [schoolClass.studentCount intValue];
 	
 	self.teacherCounterField.selector = @selector(setTeacherCount:);
-	self.teacherCounterField.text = @"Teachers";
+	self.teacherCounterField.multipleText = @"Teachers";
+	self.teacherCounterField.singleText = @"Teacher";
 	self.teacherCounterField.count = [schoolClass.teacherCount intValue];
 	
 	[self.changeableView addSubview:self.classView];
@@ -141,6 +159,7 @@
 
 - (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
     barButtonItem.title = @"Schools";
+	
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items insertObject:barButtonItem atIndex:0];
     [toolbar setItems:items animated:YES];

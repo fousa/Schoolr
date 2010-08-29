@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DetailViewController.h"
+#import "InfoView.h"
 
 @interface CounterCell : UIView {
 	int count;
 }
 
 @property (nonatomic) int count;
-@property (nonatomic, retain) NSString *text;
+@property (nonatomic, retain) NSString *singleText;
+@property (nonatomic, retain) NSString *multipleText;
 @property (nonatomic) SEL selector;
 @property (nonatomic, retain) IBOutlet id delegate;
 
