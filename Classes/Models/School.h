@@ -13,14 +13,18 @@
 @class SchoolClass;
 
 @interface School : NSManagedObject
+
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *number;
 @property (nonatomic, retain) NSString *contractNumber;
+@property (nonatomic, retain) NSString *comment;
 @property (nonatomic, retain) NSSet *classes;
 @property (nonatomic, retain) NSNumber *bothersSistersCount;
 
+- (BOOL)empty;
 - (int)totalStudents;
 - (int)totalTeachers;
+
 @end
 
 @interface School (SchoolClassMethods)

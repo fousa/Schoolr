@@ -47,6 +47,8 @@
 		60D24F46122EE0E400EC1B7A /* add-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D24F45122EE0E400EC1B7A /* add-pressed.png */; };
 		60D24F4B122EE19900EC1B7A /* remove-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D24F49122EE19900EC1B7A /* remove-pressed.png */; };
 		60D24F4C122EE19900EC1B7A /* remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D24F4A122EE19900EC1B7A /* remove.png */; };
+		60D250A0122EFAD800EC1B7A /* CommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D2509E122EFAD800EC1B7A /* CommentController.m */; };
+		60D250A1122EFAD800EC1B7A /* CommentForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60D2509F122EFAD800EC1B7A /* CommentForm.xib */; };
 		60FF552A122ECA540013F8CB /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF5528122ECA540013F8CB /* Default-Landscape.png */; };
 		60FF552B122ECA540013F8CB /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF5529122ECA540013F8CB /* Default-Portrait.png */; };
 		60FF553E122ED0A50013F8CB /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF553D122ED0A50013F8CB /* Icon-iPad.png */; };
@@ -117,6 +119,9 @@
 		60D24F45122EE0E400EC1B7A /* add-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-pressed.png"; path = "Images/add-pressed.png"; sourceTree = "<group>"; };
 		60D24F49122EE19900EC1B7A /* remove-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "remove-pressed.png"; path = "Images/remove-pressed.png"; sourceTree = "<group>"; };
 		60D24F4A122EE19900EC1B7A /* remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = remove.png; path = Images/remove.png; sourceTree = "<group>"; };
+		60D2509D122EFAD800EC1B7A /* CommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentController.h; sourceTree = "<group>"; };
+		60D2509E122EFAD800EC1B7A /* CommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentController.m; sourceTree = "<group>"; };
+		60D2509F122EFAD800EC1B7A /* CommentForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CommentForm.xib; path = Classes/CommentForm.xib; sourceTree = "<group>"; };
 		60FF5528122ECA540013F8CB /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		60FF5529122ECA540013F8CB /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		60FF553D122ED0A50013F8CB /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
@@ -159,6 +164,8 @@
 				609EF3FE12294C580064F290 /* ClassViewController.m */,
 				609EF49F122952D20064F290 /* ClassFormController.h */,
 				609EF4A0122952D20064F290 /* ClassFormController.m */,
+				60D2509D122EFAD800EC1B7A /* CommentController.h */,
+				60D2509E122EFAD800EC1B7A /* CommentController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60D2509F122EFAD800EC1B7A /* CommentForm.xib */,
 				60FF553D122ED0A50013F8CB /* Icon-iPad.png */,
 				60FF5528122ECA540013F8CB /* Default-Landscape.png */,
 				60FF5529122ECA540013F8CB /* Default-Portrait.png */,
@@ -385,6 +393,7 @@
 				60D24F46122EE0E400EC1B7A /* add-pressed.png in Resources */,
 				60D24F4B122EE19900EC1B7A /* remove-pressed.png in Resources */,
 				60D24F4C122EE19900EC1B7A /* remove.png in Resources */,
+				60D250A1122EFAD800EC1B7A /* CommentForm.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +426,7 @@
 				6051EA48122AF42D002179BB /* NSDictionary_DeepMutableCopy.m in Sources */,
 				6051EA49122AF42D002179BB /* RegexKitLite.m in Sources */,
 				60281FCA122B0B0800164351 /* InfoView.m in Sources */,
+				60D250A0122EFAD800EC1B7A /* CommentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

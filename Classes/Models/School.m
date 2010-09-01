@@ -13,6 +13,7 @@
 @dynamic name;
 @dynamic number;
 @dynamic contractNumber;
+@dynamic comment;
 @dynamic classes;
 @dynamic bothersSistersCount;
 
@@ -30,6 +31,10 @@
 		total += [schoolClass.teacherCount intValue];
 	}
 	return total;
+}
+
+- (BOOL)empty {
+	return self.comment == nil || [self.comment length] == 0;
 }
 
 @end

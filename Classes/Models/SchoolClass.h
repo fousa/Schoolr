@@ -11,9 +11,14 @@
 @class School;
 
 @interface SchoolClass : NSManagedObject
+
+- (BOOL)empty;
+
 @property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *comment;
 @property (nonatomic, retain) School *school;
 @property (nonatomic, retain) NSNumber *teacherCount;
 @property (nonatomic, retain) NSNumber *studentCount;
 @property (nonatomic, retain) NSString *realStudentCount;
+
 @end

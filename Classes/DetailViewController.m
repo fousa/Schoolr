@@ -39,6 +39,20 @@
 	}
 }
 
+- (IBAction)showCommentForm:(id)sender {
+	if (school != nil) {
+		CommentController *commentFormController = [[CommentController alloc] initWithNibName:@"CommentForm" bundle:[NSBundle mainBundle]];
+		commentFormController.modalPresentationStyle = UIModalPresentationFormSheet;
+		if (schoolClass == nil) {
+			commentFormController.school = school;
+		} else {
+			commentFormController.schoolClass = schoolClass;
+		}
+		commentFormController.delegate = self;
+		[self presentModalViewController:commentFormController animated:YES];
+	}
+}
+
 - (IBAction)schowEmailForm:(id)sender {
 	if (school != nil) {
 		MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
@@ -74,6 +88,7 @@
 
 - (void)setSchoolItem:(School *)mySchool {
 	[school release];
+	[schoolClass release];
 	school = [mySchool retain];
 		
 	[self configureSchoolView];
@@ -139,6 +154,16 @@
 	self.teacherCounterField.count = [schoolClass.teacherCount intValue];
 	
 	[self.changeableView addSubview:self.classView];
+}
+
+- (void)insertComment:(NSString *)comment {
+	if (schoolClass == nil) {
+		school.comment = comment;
+	} else {
+		schoolClass.comment = comment;
+	}
+	NSError *error = nil;
+	[managedObjectContext save:&error];
 }
 
 - (void)setBrotherSisterCount:(NSNumber *)count {

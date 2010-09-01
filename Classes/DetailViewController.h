@@ -15,13 +15,14 @@
 
 #import "SchoolFormController.h"
 #import "ClassFormController.h"
+#import "CommentController.h"
 #import "CounterCell.h"
 #import "InfoView.h"
 
 #import "School.h"
 #import "SchoolClass.h"
 
-@class RootViewController, ClassViewController, CounterCell;
+@class RootViewController, ClassViewController, CounterCell, CommentController;
 
 @interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UITableViewDelegate, MFMailComposeViewControllerDelegate> {
     
@@ -58,9 +59,11 @@
 
 - (IBAction)showSchoolForm:(id)sender;
 - (IBAction)schowEmailForm:(id)sender;
+- (IBAction)showCommentForm:(id)sender;
 
 - (void)setSchoolItem:(School *)mySchool;
 - (void)setClassItem:(SchoolClass *)mySchoolClass;
+- (void)insertComment:(NSString *)comment;
 
 - (void)setBrotherSisterCount:(NSNumber *)count;
 - (void)setStudentCount:(NSNumber *)count;

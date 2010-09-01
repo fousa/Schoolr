@@ -26,6 +26,10 @@
 			</tr>
 		</table>
 		
+		<h4>Comments.</h4>
+		
+		<p>{{ school.comment }}</p>
+		
 		<h4>Class Statistics.</h4>
 		<table>
 			<tr>
@@ -40,6 +44,10 @@
 					<td style="text-align: right;">{{ class.studentCount }}</td>
 					<td style="text-align: right;">{{ class.teacherCount }}</td>
 					<td style="text-align: right;">{{ class.realStudentCount }}</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="3" style="font-style: italic;">{{ class.comment }}</td>
 				</tr>
 			{% /for %}
 		</table>

@@ -10,6 +10,10 @@
 
 @implementation SchoolFormController
 
+- (void)viewDidLoad {
+	[self.nameField becomeFirstResponder];
+}
+
 #pragma mark -
 #pragma mark Button actions
 
