@@ -69,7 +69,7 @@
 		[variables setObject:[NSNumber numberWithInt:[school totalTeachers]] forKey:@"totalTeachers"];
 		[variables setObject:[NSNumber numberWithInt:[school totalStudents]] forKey:@"totalStudents"];
 		[variables setObject:school.bothersSistersCount forKey:@"totalBrothersAndSisters"];
-		[variables setObject:school.classes forKey:@"classes"];
+		[variables setObject:[[school.classes allObjects] sortedArrayUsingSelector:@selector(compare:)] forKey:@"classes"];
 		NSString *html = [mailEngine processTemplateInFileAtPath:templatePath withVariables:variables];
 		[mailController setMessageBody:html isHTML:YES];
 		
