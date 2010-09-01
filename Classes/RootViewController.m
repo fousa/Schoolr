@@ -127,9 +127,6 @@
         
         // Delete the managed object.
         School *objectToDelete = (School *)[fetchedResultsController objectAtIndexPath:indexPath];
-        //if (detailViewController.school == objectToDelete) {
-          //  detailViewController.school = nil;
-        //}
         
         NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
         [context deleteObject:objectToDelete];
@@ -183,9 +180,9 @@
     
     [fetchRequest setFetchBatchSize:20];
     
-    NSSortDescriptor *nameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
-	NSSortDescriptor *numberSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"number" ascending:NO];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameSortDescriptor, numberSortDescriptor, nil];
+    NSSortDescriptor *nameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+	NSSortDescriptor *numberSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"number" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:numberSortDescriptor, nameSortDescriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
