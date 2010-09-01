@@ -38,8 +38,8 @@
 	UIColor *backgroundColor = [UIColor whiteColor];
 	UIColor *titleColor = [UIColor blackColor];
 	UIColor *authorsColor = [UIColor grayColor];
-	UIFont *titleFont = [[UIFont boldSystemFontOfSize:20] retain];
-	UIFont *authorsFont = [[UIFont systemFontOfSize:14] retain];
+	UIFont *titleFont = [UIFont boldSystemFontOfSize:20];
+	UIFont *authorsFont = [UIFont systemFontOfSize:14];
 	
 //	if (self.selected) {
 //		backgroundColor = [UIColor clearColor];
