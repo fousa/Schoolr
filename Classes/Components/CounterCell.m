@@ -25,21 +25,22 @@
 - (void)awakeFromNib {
 	self.backgroundColor = [UIColor clearColor];
 	
-	countLabel = [[InfoView alloc] initWithFrame:CGRectMake(0, 0, 390.0f, 100.0f)];
+	countLabel = [[InfoView alloc] initWithFrame:CGRectMake(0, 0, 370.0f, 100.0f)];
 	[self addSubview:countLabel];
 	
 	addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	[addButton setImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
-	addButton.backgroundColor = [UIColor colorWithRed:.502 green:1 blue:.502 alpha:1];
+	[addButton setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
+	[addButton setImage:[UIImage imageNamed:@"add-pressed.png"] forState:UIControlStateHighlighted];
+	addButton.backgroundColor = [UIColor clearColor];
 	addButton.showsTouchWhenHighlighted = YES;
 	addButton.frame = CGRectMake(400.0f, 0, 100.0f, 100.0f);
 	[addButton addTarget:self action:@selector(increaseCounter) forControlEvents:UIControlEventTouchDown];
 	[self addSubview:addButton];
 	
 	deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	[deleteButton setImage:[UIImage imageNamed:@"minus.png"] forState:UIControlStateNormal];
+	[deleteButton setImage:[UIImage imageNamed:@"remove.png"] forState:UIControlStateNormal];
+	[deleteButton setImage:[UIImage imageNamed:@"remove-pressed.png"] forState:UIControlStateHighlighted];
 	deleteButton.showsTouchWhenHighlighted = YES;
-	deleteButton.backgroundColor = [UIColor colorWithRed:1 green:.502 blue:.502 alpha:1];
 	deleteButton.frame = CGRectMake(510.0f, 0, 100.0f, 100.0f);
 	[deleteButton addTarget:self action:@selector(decreaseCounter) forControlEvents:UIControlEventTouchDown];
 	[self addSubview:deleteButton];

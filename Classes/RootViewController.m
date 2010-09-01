@@ -59,8 +59,7 @@
 - (void)configureCell:(SchoolCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     School *schoolObject = (School *)[fetchedResultsController objectAtIndexPath:indexPath];
     
-	[cell setName:schoolObject.name];
-	[cell setNumber:schoolObject.number];
+	[cell setName:schoolObject.name andNumber:schoolObject.number];
 }
 
 #pragma mark -
@@ -104,7 +103,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 50.0f;
+	return 60.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -16,25 +16,25 @@
 @implementation InfoView
 
 - (void)awakeFromNib {
-	self.backgroundColor = [UIColor colorWithRed:.8 green:.8 blue:.8 alpha:0.6];
+	//self.backgroundColor = [UIColor colorWithRed:.8 green:.8 blue:.8 alpha:0.6];
 	
-	label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 550.0f, 100.0f)];
-	label.backgroundColor = [UIColor clearColor];
-	label.font = [UIFont fontWithName:@"AppleGothic" size:35.0f];
-	label.textColor = [UIColor colorWithRed:.4 green:.4 blue:.4 alpha:0.6];
-	label.textAlignment = UITextAlignmentCenter;
+	label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 370.0f, 100.0f)];
+	//label.backgroundColor = [UIColor clearColor];
+	label.font = [UIFont fontWithName:@"Georgia" size:35.0f];
+	label.textColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
+	label.textAlignment = UITextAlignmentRight;
 	[self addSubview:label];
 }
 
 - (id)initWithFrame:(CGRect)frame {
 	if (self = [super initWithFrame:frame]) {
-		self.backgroundColor = [UIColor colorWithRed:.8 green:.8 blue:.8 alpha:0.6];
+		//self.backgroundColor = [UIColor colorWithRed:.8 green:.8 blue:.8 alpha:0.6];
 		
 		label = [[UILabel alloc] initWithFrame:frame];
 		label.backgroundColor = [UIColor clearColor];
-		label.font = [UIFont fontWithName:@"AppleGothic" size:35.0f];
-		label.textColor = [UIColor colorWithRed:.4 green:.4 blue:.4 alpha:0.6];
-		label.textAlignment = UITextAlignmentCenter;
+		label.font = [UIFont fontWithName:@"Georgia" size:35.0f];
+		label.textColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
+		label.textAlignment = UITextAlignmentRight;
 		[self addSubview:label];
 	}
 	return self;

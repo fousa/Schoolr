@@ -50,9 +50,9 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SchoolCell *cell = (SchoolCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[SchoolCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
@@ -113,6 +113,10 @@
     }   
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 45.0f;
+}
+
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SchoolClass *class = (SchoolClass *)[classes objectAtIndex:indexPath.row];
 	
@@ -125,12 +129,10 @@
 	[aTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(SchoolCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     SchoolClass *managedObject = (SchoolClass *)[classes objectAtIndex:indexPath.row];
-    cell.textLabel.text = managedObject.name;
 	cell.accessoryType = UITableViewCellAccessoryNone;
-	//[cell setName:[[managedObject valueForKey:@"name"] description]];
-	//[cell setNumber:[[managedObject valueForKey:@"number"] description]];
+	[cell setName:managedObject.name andNumber:nil];
 }
 
 - (NSFetchedResultsController *)fetchedResultsController {

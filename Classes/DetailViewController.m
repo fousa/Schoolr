@@ -18,7 +18,7 @@
 @implementation DetailViewController
 
 - (void)viewDidLoad {
-	//toolbar.tintColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
+	toolbar.tintColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
 	
 	managedObjectContext = [(SchoolsPicsAppDelegate *)[UIApplication sharedApplication].delegate managedObjectContext];
 }
@@ -44,6 +44,7 @@
 		MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
 		[mailController setSubject:[NSString stringWithFormat:@"Pictures for %@ (%@)", school.name, school.number]];
 		mailController.mailComposeDelegate = self;
+		mailController.navigationBar.tintColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
 		
 		MGTemplateEngine *mailEngine = [MGTemplateEngine templateEngine];
 		[mailEngine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:mailEngine]];

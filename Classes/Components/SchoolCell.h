@@ -10,7 +10,6 @@
 
 @interface SchoolCell : UITableViewCell
 
-- (void)setName:(NSString *)myName;
-- (void)setNumber:(NSString *)myNumber;
+- (void)setName:(NSString *)myName andNumber:(NSString *)myNumber;
 
 @end
