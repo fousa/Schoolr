@@ -18,6 +18,8 @@
 @implementation DetailViewController
 
 - (void)viewDidLoad {
+	//toolbar.tintColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
+	
 	managedObjectContext = [(SchoolsPicsAppDelegate *)[UIApplication sharedApplication].delegate managedObjectContext];
 }
 

@@ -43,6 +43,9 @@
 		609EF4A1122952D20064F290 /* ClassFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EF4A0122952D20064F290 /* ClassFormController.m */; };
 		60C15F1912298993004C5764 /* School.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C15F1812298993004C5764 /* School.m */; };
 		60C15F2E12298A5E004C5764 /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C15F2D12298A5E004C5764 /* SchoolClass.m */; };
+		60FF552A122ECA540013F8CB /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF5528122ECA540013F8CB /* Default-Landscape.png */; };
+		60FF552B122ECA540013F8CB /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF5529122ECA540013F8CB /* Default-Portrait.png */; };
+		60FF553E122ED0A50013F8CB /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF553D122ED0A50013F8CB /* Icon-iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +109,9 @@
 		60C15F1812298993004C5764 /* School.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = School.m; path = Models/School.m; sourceTree = "<group>"; };
 		60C15F2C12298A5E004C5764 /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SchoolClass.h; path = Models/SchoolClass.h; sourceTree = "<group>"; };
 		60C15F2D12298A5E004C5764 /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SchoolClass.m; path = Models/SchoolClass.m; sourceTree = "<group>"; };
+		60FF5528122ECA540013F8CB /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		60FF5529122ECA540013F8CB /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		60FF553D122ED0A50013F8CB /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* SchoolsPics-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SchoolsPics-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +189,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60FF553D122ED0A50013F8CB /* Icon-iPad.png */,
+				60FF5528122ECA540013F8CB /* Default-Landscape.png */,
+				60FF5529122ECA540013F8CB /* Default-Portrait.png */,
 				602820E0122B1A1E00164351 /* Images */,
 				6051EA4D122AF458002179BB /* Templates */,
 				609EF49D122952A60064F290 /* ClassForm.xib */,
@@ -357,6 +366,9 @@
 				6051EA4F122AF46D002179BB /* mail.html in Resources */,
 				602820E2122B1A2D00164351 /* plus.png in Resources */,
 				602820ED122B1AAC00164351 /* minus.png in Resources */,
+				60FF552A122ECA540013F8CB /* Default-Landscape.png in Resources */,
+				60FF552B122ECA540013F8CB /* Default-Portrait.png in Resources */,
+				60FF553E122ED0A50013F8CB /* Icon-iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +428,13 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SchoolsPics_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SchoolsPics-Info.plist";
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-nonfragile-abi2",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
 				PRODUCT_NAME = SchoolsPics;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -426,7 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jelle Vandebeeck (DR39Q8437E)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -436,6 +454,7 @@
 					"-fobjc-nonfragile-abi2",
 				);
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "772BC658-064F-47AF-B2FA-88F8758588A8";
 				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -445,12 +464,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BE76A388-B104-45ED-A51C-02313587DB30";
 				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

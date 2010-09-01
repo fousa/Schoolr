@@ -26,6 +26,7 @@
     [super viewDidLoad];
 	self.title = @"Schools";
 	
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:.067 green:.110 blue:.145 alpha:1.0];
 	self.navigationController.delegate = self;
 	
 	self.classActive = NO;

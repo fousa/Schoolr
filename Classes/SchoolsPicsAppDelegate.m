@@ -21,6 +21,9 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+	
+	[NSThread sleepForTimeInterval:2];
+	
     [window addSubview:splitViewController.view];
     [window makeKeyAndVisible];
 	
