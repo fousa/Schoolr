@@ -20,6 +20,7 @@
 - (IBAction)cancel:(id)sender;
 
 @property (nonatomic, retain) IBOutlet UITextField *nameField;
+@property (nonatomic, retain) IBOutlet UITextField *studentCountField;
 
 @property (nonatomic, retain) IBOutlet ClassViewController *classViewController;
 

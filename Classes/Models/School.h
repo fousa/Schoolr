@@ -15,6 +15,7 @@
 @interface School : NSManagedObject
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *number;
+@property (nonatomic, retain) NSString *contractNumber;
 @property (nonatomic, retain) NSSet *classes;
 @property (nonatomic, retain) NSNumber *bothersSistersCount;
 

@@ -125,10 +125,37 @@
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 					</object>
+					<object class="IBUITextField" id="303480083">
+						<reference key="NSNextResponder" ref="868074760"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{52, 297}, {432, 70}}</string>
+						<reference key="NSSuperview" ref="868074760"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentVerticalAlignment">3</int>
+						<string key="IBUIText"/>
+						<int key="IBUIBorderStyle">3</int>
+						<string key="IBUIPlaceholder">contract</string>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4wNTg4MjM1Mjk0MSAwLjEwOTgwMzkyMTYgMC4xNDUwOTgwMzkyAA</bytes>
+						</object>
+						<reference key="IBUIFont" ref="291232112"/>
+						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
+						<float key="IBUIMinimumFontSize">20</float>
+						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+							<int key="IBUIAutocapitalizationType">1</int>
+							<int key="IBUIAutocorrectionType">1</int>
+							<int key="IBUIKeyboardType">2</int>
+							<int key="IBUIReturnKeyType">4</int>
+							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						</object>
+					</object>
 					<object class="IBUIButton" id="832620968">
 						<reference key="NSNextResponder" ref="868074760"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{378, 300}, {106, 62}}</string>
+						<string key="NSFrame">{{378, 389}, {106, 62}}</string>
 						<reference key="NSSuperview" ref="868074760"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -160,7 +187,7 @@
 					<object class="IBUIButton" id="1004144046">
 						<reference key="NSNextResponder" ref="868074760"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{52, 300}, {159, 62}}</string>
+						<string key="NSFrame">{{52, 389}, {159, 62}}</string>
 						<reference key="NSSuperview" ref="868074760"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -183,7 +210,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="26988672"/>
 					</object>
 				</object>
-				<string key="NSFrameSize">{532, 382}</string>
+				<string key="NSFrameSize">{532, 563}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -200,27 +227,11 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="868074760"/>
-					</object>
-					<int key="connectionID">5</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">rootViewController</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="479125727"/>
 					</object>
 					<int key="connectionID">13</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">numberField</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="390834317"/>
-					</object>
-					<int key="connectionID">17</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -242,11 +253,35 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="868074760"/>
+					</object>
+					<int key="connectionID">23</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">nameField</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="432478697"/>
 					</object>
-					<int key="connectionID">21</int>
+					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">numberField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="390834317"/>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">contractField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="303480083"/>
+					</object>
+					<int key="connectionID">27</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -275,10 +310,11 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="432478697"/>
-							<reference ref="390834317"/>
+							<reference ref="919258758"/>
+							<reference ref="303480083"/>
 							<reference ref="832620968"/>
 							<reference ref="1004144046"/>
-							<reference ref="919258758"/>
+							<reference ref="390834317"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -312,6 +348,11 @@
 						<reference key="object" ref="1004144046"/>
 						<reference key="parent" ref="868074760"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">22</int>
+						<reference key="object" ref="303480083"/>
+						<reference key="parent" ref="868074760"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -324,11 +365,11 @@
 					<string>12.CustomClassName</string>
 					<string>12.IBPluginDependency</string>
 					<string>14.IBPluginDependency</string>
+					<string>22.IBPluginDependency</string>
 					<string>4.IBEditorWindowLastContentRect</string>
 					<string>4.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
-					<string>9.CustomClassName</string>
 					<string>9.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
@@ -339,11 +380,11 @@
 					<string>RootViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{108, 161}, {532, 382}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{422, 180}, {532, 563}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>TextField</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -363,7 +404,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">27</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -426,6 +467,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>brothersCounterField</string>
 							<string>changeableView</string>
 							<string>classCountLabel</string>
 							<string>classView</string>
@@ -441,6 +483,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>CounterCell</string>
 							<string>UIView</string>
 							<string>InfoView</string>
 							<string>UIView</string>
@@ -459,6 +502,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>brothersCounterField</string>
 							<string>changeableView</string>
 							<string>classCountLabel</string>
 							<string>classView</string>
@@ -474,6 +518,10 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">brothersCounterField</string>
+								<string key="candidateClassName">CounterCell</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">changeableView</string>
 								<string key="candidateClassName">UIView</string>
@@ -595,12 +643,14 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>contractField</string>
 							<string>nameField</string>
 							<string>numberField</string>
 							<string>rootViewController</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITextField</string>
 							<string>UITextField</string>
 							<string>UITextField</string>
 							<string>RootViewController</string>
@@ -610,12 +660,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>contractField</string>
 							<string>nameField</string>
 							<string>numberField</string>
 							<string>rootViewController</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">contractField</string>
+								<string key="candidateClassName">UITextField</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">nameField</string>
 								<string key="candidateClassName">UITextField</string>

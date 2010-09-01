@@ -13,6 +13,7 @@
 @dynamic name;
 @dynamic studentCount;
 @dynamic teacherCount;
+@dynamic realStudentCount;
 
 - (NSComparisonResult)compare:(SchoolClass *)myClass {
     return [self.name compare:myClass.name];

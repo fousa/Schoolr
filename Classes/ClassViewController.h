@@ -34,7 +34,7 @@
 
 - (void)setSchool:(School *)mySchool;
 
-- (BOOL)insertClassWithName:(NSString *)name;
+- (BOOL)insertClassWithName:(NSString *)name andStudentCount:(NSString *)studentCount;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -56,27 +56,23 @@
 	// Set background
 	[backgroundColor set];
 	CGContextFillRect(context, rectangle);
-	
-	// Draw background gradient image
-	[backgroundImage drawInRect:CGRectMake(point.x, point.y + (number == nil ? 34 : 49), 320, 10)];
-//	[backgroundCoverImage drawInRect:CGRectMake(point.x, point.y, 55, 55)];
-	
+
+	[backgroundImage drawInRect:CGRectMake(point.x, point.y + 49, 320, 10)];
+
 	// Draw title
 	[titleColor set];
 	point.x += 7;
 	point.y += 7;
 	CGSize size = [name drawAtPoint:point forWidth:230 withFont:titleFont lineBreakMode:UILineBreakModeTailTruncation];
 	
-	if (number != nil) {
-		[authorsColor set];
-		point.y += size.height;
-		[number drawAtPoint:point forWidth:229 withFont:authorsFont lineBreakMode:UILineBreakModeTailTruncation];
-	}
+	[authorsColor set];
+	point.y += size.height;
+	[number drawAtPoint:point forWidth:229 withFont:authorsFont lineBreakMode:UILineBreakModeTailTruncation];
 }
 
 - (void)setName:(NSString *)myName andNumber:(NSString *)myNumber {
 	name = myName;
-	number = myNumber;
+	number = [myNumber retain];
 	[self setNeedsDisplay]; 
 }
 

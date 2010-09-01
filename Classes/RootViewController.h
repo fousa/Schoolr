@@ -30,6 +30,6 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-- (BOOL)insertSchoolWithName:(NSString *)name andNumber:(NSString *)number;
+- (BOOL)insertSchoolWithName:(NSString *)name andNumber:(NSString *)number andContractNumber:(NSString *)contractNumber;
 
 @end

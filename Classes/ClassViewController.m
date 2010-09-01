@@ -58,7 +58,7 @@
     return cell;
 }
 
-- (BOOL)insertClassWithName:(NSString *)name {
+- (BOOL)insertClassWithName:(NSString *)name andStudentCount:(NSString *)studentCount {
     NSIndexPath *currentSelection = [self.tableView indexPathForSelectedRow];
 	if (currentSelection != nil) {
 		[self.tableView deselectRowAtIndexPath:currentSelection animated:NO];
@@ -69,6 +69,7 @@
 	   
 	classObject.name = name;
 	classObject.school = school;
+	classObject.realStudentCount = studentCount;
 	
 	[[school mutableSetValueForKey:@"classes"] addObject:classObject];
 	   
@@ -114,7 +115,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 45.0f;
+	return 60.0f;
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -132,7 +133,7 @@
 - (void)configureCell:(SchoolCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     SchoolClass *managedObject = (SchoolClass *)[classes objectAtIndex:indexPath.row];
 	cell.accessoryType = UITableViewCellAccessoryNone;
-	[cell setName:managedObject.name andNumber:nil];
+	[cell setName:managedObject.name andNumber:[NSString stringWithFormat:@"%@ Students", managedObject.realStudentCount]];
 }
 
 - (NSFetchedResultsController *)fetchedResultsController {

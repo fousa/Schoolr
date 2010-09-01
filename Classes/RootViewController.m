@@ -59,13 +59,15 @@
 - (void)configureCell:(SchoolCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     School *schoolObject = (School *)[fetchedResultsController objectAtIndexPath:indexPath];
     
-	[cell setName:schoolObject.name andNumber:schoolObject.number];
+	NSString *number = [NSString stringWithFormat:@"%@ / %@", schoolObject.number, schoolObject.contractNumber];
+	
+	[cell setName:schoolObject.name andNumber:number];
 }
 
 #pragma mark -
 #pragma mark Add a new object
 
-- (BOOL)insertSchoolWithName:(NSString *)name andNumber:(NSString *)number {
+- (BOOL)insertSchoolWithName:(NSString *)name andNumber:(NSString *)number andContractNumber:(NSString *)contractNumber {
     NSIndexPath *currentSelection = [self.tableView indexPathForSelectedRow];
     if (currentSelection != nil) {
         [self.tableView deselectRowAtIndexPath:currentSelection animated:NO];
@@ -77,6 +79,7 @@
     
     schoolObject.name = name;
 	schoolObject.number = number;
+	schoolObject.contractNumber = contractNumber;
     
     NSError *error = nil;
     if ([context save:&error]) {

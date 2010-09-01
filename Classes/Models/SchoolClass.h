@@ -15,4 +15,5 @@
 @property (nonatomic, retain) School *school;
 @property (nonatomic, retain) NSNumber *teacherCount;
 @property (nonatomic, retain) NSNumber *studentCount;
+@property (nonatomic, retain) NSString *realStudentCount;
 @end

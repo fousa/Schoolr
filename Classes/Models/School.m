@@ -12,6 +12,7 @@
 
 @dynamic name;
 @dynamic number;
+@dynamic contractNumber;
 @dynamic classes;
 @dynamic bothersSistersCount;
 

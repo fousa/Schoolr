@@ -57,15 +57,42 @@
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace">
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="474139576">
 								<int key="NSID">2</int>
 							</object>
 						</object>
-						<object class="NSFont" key="IBUIFont">
+						<object class="NSFont" key="IBUIFont" id="113275241">
 							<string key="NSName">CenturyGothic</string>
 							<double key="NSSize">60</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
+						<float key="IBUIMinimumFontSize">20</float>
+						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+							<int key="IBUIAutocapitalizationType">1</int>
+							<int key="IBUIAutocorrectionType">1</int>
+							<int key="IBUIKeyboardType">1</int>
+							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						</object>
+					</object>
+					<object class="IBUITextField" id="712045425">
+						<reference key="NSNextResponder" ref="868074760"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{54, 206}, {432, 70}}</string>
+						<reference key="NSSuperview" ref="868074760"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<string key="IBUIText"/>
+						<int key="IBUIBorderStyle">3</int>
+						<string key="IBUIPlaceholder">student count</string>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MAA</bytes>
+							<reference key="NSCustomColorSpace" ref="474139576"/>
+						</object>
+						<reference key="IBUIFont" ref="113275241"/>
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">20</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -85,7 +112,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Add school</string>
+						<string key="IBUIText">Add class</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Georgia</string>
 							<double key="NSSize">72</double>
@@ -103,7 +130,7 @@
 					<object class="IBUIButton" id="1058253800">
 						<reference key="NSNextResponder" ref="868074760"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{380, 207}, {106, 62}}</string>
+						<string key="NSFrame">{{380, 300}, {106, 62}}</string>
 						<reference key="NSSuperview" ref="868074760"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -135,7 +162,7 @@
 					<object class="IBUIButton" id="330947312">
 						<reference key="NSNextResponder" ref="868074760"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{54, 207}, {159, 62}}</string>
+						<string key="NSFrame">{{54, 300}, {159, 62}}</string>
 						<reference key="NSSuperview" ref="868074760"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -158,7 +185,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="26988672"/>
 					</object>
 				</object>
-				<string key="NSFrameSize">{538, 289}</string>
+				<string key="NSFrameSize">{538, 392}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -179,14 +206,6 @@
 					<int key="connectionID">5</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">nameField</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="432478697"/>
-					</object>
-					<int key="connectionID">19</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">cancel:</string>
 						<reference key="source" ref="330947312"/>
@@ -203,6 +222,22 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nameField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="432478697"/>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">studentCountField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="712045425"/>
+					</object>
+					<int key="connectionID">28</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -232,6 +267,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="759996222"/>
 							<reference ref="432478697"/>
+							<reference ref="712045425"/>
 							<reference ref="1058253800"/>
 							<reference ref="330947312"/>
 						</object>
@@ -257,6 +293,11 @@
 						<reference key="object" ref="330947312"/>
 						<reference key="parent" ref="868074760"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">26</int>
+						<reference key="object" ref="712045425"/>
+						<reference key="parent" ref="868074760"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -268,6 +309,7 @@
 					<string>21.IBPluginDependency</string>
 					<string>22.IBPluginDependency</string>
 					<string>23.IBPluginDependency</string>
+					<string>26.IBPluginDependency</string>
 					<string>4.IBEditorWindowLastContentRect</string>
 					<string>4.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
@@ -279,7 +321,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{114, 216}, {538, 289}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{323, 134}, {538, 392}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -300,7 +343,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">25</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -346,10 +389,12 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>classViewController</string>
 							<string>nameField</string>
+							<string>studentCountField</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>ClassViewController</string>
+							<string>UITextField</string>
 							<string>UITextField</string>
 						</object>
 					</object>
@@ -359,6 +404,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>classViewController</string>
 							<string>nameField</string>
+							<string>studentCountField</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -368,6 +414,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">nameField</string>
+								<string key="candidateClassName">UITextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">studentCountField</string>
 								<string key="candidateClassName">UITextField</string>
 							</object>
 						</object>

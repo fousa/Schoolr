@@ -14,7 +14,7 @@
 #pragma mark Button actions
 
 - (IBAction)save:(id)sender {
-	if ([self.rootViewController insertSchoolWithName:self.nameField.text andNumber:self.numberField.text]) {
+	if ([self.rootViewController insertSchoolWithName:self.nameField.text andNumber:self.numberField.text andContractNumber:self.contractField.text]) {
 		[self dismissModalViewControllerAnimated:YES];
 	} 
 }

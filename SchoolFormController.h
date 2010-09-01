@@ -17,6 +17,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *nameField;
 @property (nonatomic, retain) IBOutlet UITextField *numberField;
+@property (nonatomic, retain) IBOutlet UITextField *contractField;
 
 @property (nonatomic, retain) IBOutlet RootViewController *rootViewController;
 
