@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="103"/>
 			<integer value="85"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -189,7 +190,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="440419363">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">290</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -198,7 +199,10 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{20, 20}, {610, 100}}</string>
 						<reference key="NSSuperview" ref="440419363"/>
-						<reference key="IBUIBackgroundColor" ref="678823470"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC44MzUyOTQxMTc2IDAuOTA5ODAzOTIxNiAwLjk0MTE3NjQ3MDYAA</bytes>
+						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<object class="IBUIView" id="335006087">
@@ -206,11 +210,26 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{20, 128}, {610, 100}}</string>
 						<reference key="NSSuperview" ref="440419363"/>
-						<reference key="IBUIBackgroundColor" ref="678823470"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC44MzUyOTQxMTc2IDAuOTA5ODAzOTIxNiAwLjk0MTE3NjQ3MDYAA</bytes>
+						</object>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+					</object>
+					<object class="IBUIView" id="393991021">
+						<reference key="NSNextResponder" ref="440419363"/>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{20, 236}, {610, 100}}</string>
+						<reference key="NSSuperview" ref="440419363"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC44MzUyOTQxMTc2IDAuOTA5ODAzOTIxNiAwLjk0MTE3NjQ3MDYAA</bytes>
+						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 				</object>
 				<string key="NSFrameSize">{650, 464}</string>
+				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -295,22 +314,6 @@
 					<int key="connectionID">114</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">teacherCounterField</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="815853150"/>
-					</object>
-					<int key="connectionID">115</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">studentCounterField</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="335006087"/>
-					</object>
-					<int key="connectionID">116</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showSchoolForm:</string>
 						<reference key="source" ref="973351152"/>
@@ -373,6 +376,38 @@
 						<reference key="destination" ref="399676671"/>
 					</object>
 					<int key="connectionID">136</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="393991021"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">148</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">brothersCounterField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="815853150"/>
+					</object>
+					<int key="connectionID">149</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">studentCounterField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="335006087"/>
+					</object>
+					<int key="connectionID">150</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">teacherCounterField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="393991021"/>
+					</object>
+					<int key="connectionID">151</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -461,16 +496,12 @@
 						<reference key="object" ref="440419363"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="815853150"/>
 							<reference ref="335006087"/>
+							<reference ref="815853150"/>
+							<reference ref="393991021"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">class</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">105</int>
-						<reference key="object" ref="815853150"/>
-						<reference key="parent" ref="440419363"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">112</int>
@@ -512,6 +543,16 @@
 						<reference key="object" ref="87911484"/>
 						<reference key="parent" ref="319179119"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">105</int>
+						<reference key="object" ref="815853150"/>
+						<reference key="parent" ref="440419363"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">147</int>
+						<reference key="object" ref="393991021"/>
+						<reference key="parent" ref="440419363"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -538,6 +579,8 @@
 					<string>132.CustomClassName</string>
 					<string>132.IBPluginDependency</string>
 					<string>139.IBPluginDependency</string>
+					<string>147.CustomClassName</string>
+					<string>147.IBPluginDependency</string>
 					<string>64.IBPluginDependency</string>
 					<string>8.IBEditorWindowLastContentRect</string>
 					<string>8.IBPluginDependency</string>
@@ -553,7 +596,7 @@
 					<string>UIResponder</string>
 					<string>CounterCell</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{302, 58}, {650, 464}}</string>
+					<string>{{333, 113}, {650, 464}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>CounterCell</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -568,13 +611,15 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>InfoView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>CounterCell</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{89, 54}, {783, 702}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{352, 267}, {650, 464}}</string>
+					<string>{{304, 267}, {650, 464}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -595,7 +640,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">142</int>
+			<int key="maxID">151</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -658,10 +703,10 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>brothersCounterField</string>
 							<string>changeableView</string>
 							<string>classCountLabel</string>
 							<string>classView</string>
-							<string>commentField</string>
 							<string>counterField</string>
 							<string>emailButtonItem</string>
 							<string>schoolView</string>
@@ -674,10 +719,10 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>CounterCell</string>
 							<string>UIView</string>
 							<string>InfoView</string>
 							<string>UIView</string>
-							<string>UITextView</string>
 							<string>CounterCell</string>
 							<string>UIBarButtonItem</string>
 							<string>UIView</string>
@@ -693,10 +738,10 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>brothersCounterField</string>
 							<string>changeableView</string>
 							<string>classCountLabel</string>
 							<string>classView</string>
-							<string>commentField</string>
 							<string>counterField</string>
 							<string>emailButtonItem</string>
 							<string>schoolView</string>
@@ -710,6 +755,10 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
+								<string key="name">brothersCounterField</string>
+								<string key="candidateClassName">CounterCell</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">changeableView</string>
 								<string key="candidateClassName">UIView</string>
 							</object>
@@ -720,10 +769,6 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">classView</string>
 								<string key="candidateClassName">UIView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">commentField</string>
-								<string key="candidateClassName">UITextView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">counterField</string>
@@ -936,14 +981,6 @@
 					<reference key="sourceIdentifier" ref="786211723"/>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">UIScrollView</string>
-					<string key="superclassName">UIView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">UIKit.framework/Headers/UIScrollView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
 					<string key="className">UISearchBar</string>
 					<string key="superclassName">UIView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -957,14 +994,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">UIKit.framework/Headers/UISearchDisplayController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">UITextView</string>
-					<string key="superclassName">UIScrollView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">UIKit.framework/Headers/UITextView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

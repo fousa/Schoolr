@@ -49,6 +49,7 @@
 @property (nonatomic, retain) IBOutlet InfoView *studentCountLabel;
 
 @property (nonatomic, retain) IBOutlet UIView *classView;
+@property (nonatomic, retain) IBOutlet CounterCell *brothersCounterField;
 @property (nonatomic, retain) IBOutlet CounterCell *studentCounterField;
 @property (nonatomic, retain) IBOutlet CounterCell *teacherCounterField;
 

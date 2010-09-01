@@ -123,6 +123,11 @@
 - (void)configureClassView {
     self.titleLabel.text = schoolClass.name;
 	
+	self.brothersCounterField.selector = @selector(setBrotherSisterCount:);
+	self.brothersCounterField.multipleText = @"Brothers & Sisters";
+	self.brothersCounterField.singleText = @"Brother & Sister";
+	self.brothersCounterField.count = [school.bothersSistersCount intValue];
+	
 	self.studentCounterField.selector = @selector(setStudentCount:);
 	self.studentCounterField.multipleText = @"Students";
 	self.studentCounterField.singleText = @"Student";
